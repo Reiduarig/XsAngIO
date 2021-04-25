@@ -1,0 +1,73 @@
+<app-header titulo="Sensores"></app-header>
+
+<ion-content padding>
+<ion-button color="success" (click)="start()">Iniciar</ion-button> 
+<ion-button color="danger" (click)="stopMagnetometer()">Parar</ion-button>    
+  
+<ion-list>
+    <h1 class="text-center">Aceleración</h1>
+    <ion-item>
+        <ion-label>Alpha:</ion-label>
+        <p>{{accX}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Beta:</ion-label>
+        <p>{{accY}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Gamma:</ion-label>
+        <p>{{accZ}}</p>
+    </ion-item>
+</ion-list>
+
+<ion-list>
+    <h1 class="text-center">Gyroscopio</h1>
+    <ion-item>
+        <ion-label>Heading:</ion-label>
+        <p>{{xOrient}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Pitch:</ion-label>
+        <p>{{yOrient}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Roll:</ion-label>
+        <p>{{zOrient}}</p>
+    </ion-item>
+</ion-list>
+
+<ion-list>
+    <h1 class="text-center">Magnetómetro</h1>
+    <ion-item>
+        <ion-label>X:</ion-label>
+        <p>{{magX}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Y:</ion-label>
+        <p>{{magY}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Z:</ion-label>
+        <p>{{magZ}}</p>
+    </ion-item>
+    <ion-item>
+        <ion-label>Calculado:</ion-label>
+        <p>{{magCalculated}}</p>
+    </ion-item>
+</ion-list>
+<ion-list>
+    <h1 class="text-center">Compass Heading</h1>
+    <ion-item>
+        <ion-label>Orientación:</ion-label>
+        <p>{{aheading}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Or.Norte Geog.:</ion-label>
+        <p>{{bheading}}</p> 
+    </ion-item>
+    <ion-item>
+        <ion-label>Desviación:</ion-label>
+        <p>{{cheading}}</p> 
+    </ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "reiduarig",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

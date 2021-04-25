@@ -1,0 +1,8 @@
+{
+  "appId": "com.reiduarig.app",
+  "appName": "reiduarig",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

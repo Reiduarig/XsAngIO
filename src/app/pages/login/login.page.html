@@ -1,0 +1,20 @@
+<ion-content padding>
+  <div class="imagen">
+    <img src="../../../assets/imagenes/portada.jpg" alt="portada">
+  </div>
+  <form class="formlogin" [formGroup]="contactForm"  (ngSubmit)= "onLogin()">
+        <ion-list>
+           <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" name="email" formControlName="email"  
+                       autocomplete="off" required
+                      required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" name="password" formControlName="password"  autocomplete="off" required="true"></ion-input>
+          </ion-item>
+        </ion-list>    
+          <ion-button class="btnEnvio" expand="block" type="submit" color="primary" [disabled]="!contactForm.valid">Entrar</ion-button>
+        </form>
+  </ion-content>

@@ -1,0 +1,26 @@
+[
+    
+    {
+      "icon": "person",
+      "name": "Usuarios",
+      "redirectTo": "usuarios" 
+    },
+    {
+      "icon": "person",
+      "name": "Sensores",
+      "redirectTo": "sensores" 
+    },
+    {
+      "icon": "person",
+      "name": "Medicación",
+      "redirectTo": "recetas" 
+      
+    },
+    {
+      "icon": "person",
+      "name": "Citas",
+      "redirectTo": "citas" 
+      
+    }
+]
+  

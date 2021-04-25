@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { UsuariosPage } from './usuarios.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: UsuariosPage
+  },
+  {
+    path: 'usuarios-add',
+    loadChildren: () => import('./usuarios-add/usuarios-add.module').then( m => m.UsuariosAddPageModule)
+  }
+  
+  
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
+})
+export class UsuariosPageRoutingModule {}

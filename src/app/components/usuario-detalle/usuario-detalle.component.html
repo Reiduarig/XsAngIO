@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrar()">X</ion-button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{user.name + ' ' + user.surname}}</ion-card-title>
+      <hr>
+      <img src="{{url + 'usuarios/avatar/' + user.image }}" class="avatar_edit" alt="No tiene imagen asignada">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <p>{{user.role | uppercase}}</p>
+        </ion-item>
+        <ion-item>
+          <p>{{user.email}}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>  
+  </ion-card>  
+</ion-content>

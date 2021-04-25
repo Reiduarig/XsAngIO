@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start"> <!--para ubicarlo al comienzo de la linea-->
+      <ion-back-button defaultHref = "/usuarios"></ion-back-button>  <!--boton para volver a la pagina de usuarios-->
+    </ion-buttons>
+    <ion-title>Nuevo usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+          <form class="formUsuario" [formGroup]="contactForm" (ngSubmit)= "saveUsuario()">
+            <ion-item>
+              <ion-input type="text" formControlName="name" placeholder="Nombre *" required="true"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="contactForm.get('name').errors && contactForm.get('name').dirty">
+              <p color="danger" ion-text *ngIf="contactForm.get('name').hasError('required')">Campo requerido</p>
+              <p color="danger" ion-text *ngIf="contactForm.get('name').hasError('minlength')">El nombre debe tener 5 caracteres como mínimo</p>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" formControlName="surname" placeholder="Apellidos *" required="true"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="contactForm.get('surname').errors && contactForm.get('surname').dirty">
+              <p color="danger" ion-text *ngIf="contactForm.get('surname').hasError('required')">Campo requerido</p>
+              <p color="danger" ion-text *ngIf="contactForm.get('surname').hasError('minlength')">Los apellido deben tener 5 caracteres como mínimo</p>
+            </ion-item>
+            <ion-item>
+              <ion-input type="email" formControlName="email" placeholder="Correo *" required="true"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="contactForm.get('email').errors && contactForm.get('email').dirty">
+              <p color="danger" ion-text *ngIf="contactForm.get('email').hasError('required')">Campo requerido</p>
+              <p color="danger" ion-text *ngIf="contactForm.get('email').hasError('email')">Debe introducir un mail correcto</p>
+            </ion-item>  
+            <ion-item>
+              <ion-input type="password" formControlName="password" placeholder="Password *" required></ion-input>
+            </ion-item>
+		      	<ion-item *ngIf="contactForm.get('password').errors && contactForm.get('password').dirty">
+              <p color="danger" ion-text *ngIf="contactForm.get('password').hasError('required')">Campo requerido</p>
+            </ion-item> 
+           <ion-item *ngIf="contactForm.get('password').errors && contactForm.get('password').dirty">
+              <p color="danger" ion-text *ngIf="contactForm.get('password').hasError('required')">Campo requerido</p>
+            </ion-item> 
+            <ion-item>
+            <ion-label>Rol</ion-label>
+              <ion-select name="role" formControlName="role" value="cliente">
+                <ion-select-option value="cliente">Cliente</ion-select-option>
+                <ion-select-option value="usuario">Usuario</ion-select-option>
+                <ion-select-option value="administrador">Administrador</ion-select-option>
+              </ion-select>
+            </ion-item>  
+            <ion-item>
+              <ion-label>Imagen</ion-label>
+              <ion-input type="file" formControlName="image"></ion-input>
+            </ion-item> 
+            <ion-button type = "submit" color="primary" [disabled]="!contactForm.valid">Guardar</ion-button>
+          </form>  
+</ion-content>

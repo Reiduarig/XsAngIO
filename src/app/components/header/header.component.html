@@ -1,0 +1,14 @@
+<ion-header no-border translucent>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-capitalize>{{ titulo }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="{{url + 'usuarios/avatar/' + identity.image }}" class="avatar_edit" alt="avatar" height="30px" >
+      </ion-avatar>
+      <ion-button (click)="logout()">Salir</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
